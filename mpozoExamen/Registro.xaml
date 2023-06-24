@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mpozoExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            
+                <Label x:Name="lblUsuario" TextColor="Red" HorizontalTextAlignment="Center" ></Label>
+                <Label Text="REGISTRO" HorizontalOptions="Center" FontSize="Subtitle" TextColor="Black"></Label>
+           
+
+           
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Text="Fecha:" Grid.Column="0" Grid.Row="0"></Label>
+                    <Label Text="Pais:" Grid.Column="0" Grid.Row="1"></Label>
+                    <Label Text="Ciudad" Grid.Column="0" Grid.Row="2"></Label>
+                    <Label Text="Monto Inicial" Grid.Column="0" Grid.Row="3"></Label>
+                    <Label Text="Pago Mensual" Grid.Column="0" Grid.Row="4"></Label>
+
+                    <DatePicker x:Name="txtFecha" Grid.Column="1" Grid.Row="0"></DatePicker>
+                    <Picker x:Name="pkPais" Grid.Column="1" Grid.Row="1" Title="Seleccionar">
+                        <Picker.Items>
+
+                            <x:String>Ecuador</x:String>
+                            <x:String>Colombia</x:String>
+                            <x:String>Peru</x:String>
+                            <x:String>España</x:String>
+
+                        </Picker.Items>
+
+                    </Picker>
+                    <Picker  x:Name="pkCiudad" Grid.Column="1" Grid.Row="2" Title="Seleccionar">
+                        <Picker.Items>
+
+                            <x:String>Quito</x:String>
+                            <x:String>Latacunga</x:String>
+                            <x:String>Ambato</x:String>
+                            <x:String>Machachi</x:String>
+
+                        </Picker.Items>
+
+                    </Picker>
+                    <Entry x:Name="txtMon"  Placeholder="Monto Inicial" Grid.Column="1" Grid.Row="3" Keyboard="Numeric" ></Entry>
+                <Entry x:Name="txtMensual"  IsReadOnly="true" Placeholder="Monto Mensual" Grid.Column="1" Grid.Row="4" ></Entry>
+
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                     <Label Text="Nombre"   Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"></Label>
+                     <Label Text="Apellido" Grid.Column="1" Grid.Row="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  ></Label>
+                     <Label Text="Edad" Grid.Column="2" Grid.Row="0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  ></Label>
+                     
+                     <Entry x:Name="txtNombre" HorizontalTextAlignment="Center" Placeholder="Nombre" Grid.Column="0" Grid.Row="1"></Entry>
+                     <Entry x:Name="txtApellido"  HorizontalTextAlignment="Center" Placeholder="Apellido" Grid.Column="1" Grid.Row="1" ></Entry>
+                <Entry x:Name="txtEdad"  HorizontalTextAlignment="Center" Placeholder="Edad" Grid.Column="2" Grid.Row="1" ></Entry>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    
+                </Grid.RowDefinitions>
+
+
+
+                <Button x:Name="btnPago" Text="Pago Mensual" Grid.Column="0" Grid.Row="0" BackgroundColor="SkyBlue" Clicked="btnPago_Clicked"></Button>
+                <Button x:Name="btnResumen"  Text="Resumen" BackgroundColor="LightSlateGray" Clicked="btnResumen_Clicked" Grid.Column="1" Grid.Row="0"></Button>
+
+
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
